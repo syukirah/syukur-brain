@@ -1,0 +1,2 @@
+ps -ef
+/var/lib/tomcat6/webapps

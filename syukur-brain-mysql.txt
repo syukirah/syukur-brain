@@ -1,0 +1,28 @@
+Author : SYUKUR BIN MD KASSIM
+Email  : syukur.kassim@tmrn.com.my
+==================================
+
+* How to connect with port and host
+ - mysql --host=127.0.0.1 --port=3307 -u root -p
+* query result send to file
+ - select sensor,value,timestamp from sentilo_observations where sensor like "LM%" into outfile '/tmp/haha.txt' FIELDS TERMINATED BY ',';
+* List down all the databases
+ - show databases;
+* List down all the tables
+ - show tables;
+* Show table scheme
+ - describe <table name>;
+* Select anything from table
+ - select * from <table name>
+* Select specific colum from tables
+ - select <column1[,column2]> from <table name>;
+* Using where to filter
+ - select * from <table name> where <column name> = "hehe";
+* Using where to filter base on prefix
+ - select * from <table name> where <column name> like "hehe%";
+* Using where to fileter using regular expression
+ - select * from <table name> where <column name> rlike "hehe.";
+* Limit the result to n count
+ - select * from <table name> limit <count>
+* Limit the result to the last n count
+ - select * from <table name > where sensor=<column name> order by id desc limit <n>;

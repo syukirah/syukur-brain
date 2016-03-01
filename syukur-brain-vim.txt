@@ -1,0 +1,182 @@
+==================
+ALL ABOUT VIM
+==================
+Author: Syukur Bin Md Kassim
+Email : syukur.kassim@tmrnd.com.my|syukirah@yahoo.co.uk
+-------------------------------------------------------
+
+NM = Normal Mode
+
+[NM] Press * to search forwards for the next occurrence of that word 
+
+vim -p file1 file2 : to open multiple tabs
+:tabn         go to next tab
+:tabp         go to previous tab
+:tabfirst     go to first tab
+:tablast      go to last tab
+
+In normal mode, you can type:
+gt            go to next tab
+gT            go to previous tab
+{i}gt         go to tab in position i
+
+
+MOVE LINE UP AND DOWN
+=====================
+:m 12	- move current line after line 12
+:5,7m 0	- move lines 5,6,7 to before first line
+
+HIGHLIGHTING
+============
+:set cursorline - Highlighting current line
+
+UNDO REDO
+=========
+u: undo last change (can be repeated to undo preceding commands)
+Ctrl-R: Redo changes which were undone (undo the undos).
+
+
+SETTING
+=======
+:set number     = show line number
+:set hlsearch   = highlight the search
+:set ignorecase = to ignore case sensitivity
+:set incsearch  = To move the cursor to the matched string, while typing the search pattern
+
+
+SEARCH & REPLACE
+================
+/searchword      - search word with case sensitive
+/\csearchword    - search word with case insensitive After searching,
+                   type :g/ to list all the lines containing the word
+/pattern         - search forward for pattern
+?pattern         - search backward
+n                - repeat forward search
+N                - repeat backward
+*                - search for word currently under cursor
+g*               - search for partial word under cursor
+:s/foo/bar/g     - Change each 'foo' to 'bar' in the current line.
+:%s/foo/bar/g    - Change each 'foo' to 'bar' in all the lines.
+:%s/foo/bar/g    - Change each 'foo' to 'bar' in all the lines. This will jump word to work and ask for confirmation
+:5,12s/foo/bar/g - Change each 'foo' to 'bar' for all lines from line 5 to line 12 (inclusive).
+
+
+SELECT
+======
+[NM] V      - selects entire lines
+[NM] v      - selects range of text
+[NM] ctrl v - selects columns
+[NM] gv     - reselect block
+vi{         - select all line in curly brace
+ggVG        - select all text in current document
+
+
+WORD & LINE COMPLETION
+======================
+ctrl-n, ctrl-p    - next/previous word completion 
+                    (similar word in current file)
+
+ctrl-x ctrl-l (ctrl-n/p)    - line completion
+
+
+INDENTING
+=========
+:set tabstop=8     - tabs are at proper location
+:set expandtab     - don't use actual tab character (ctrl-v)
+:set shiftwidth=4  - indenting is 4 spaces
+:set autoindent    - turns it on
+:set smartindent   - does the right thing (mostly) in programs
+:set cindent       - stricter rules for C programs
+
+gg=G               - reindent
+
+ctrl-t, ctrl-d  - indent current line forward, backwards 
+                  (insert mode)
+visual > or <   - indent block by sw (repeat with . )
+
+MOVE AROUND
+===========
+e - Move to the end of a word.
+w - Move forward to the beginning of a word.
+b - Move backward to the beginning of a word.
+$ - Move to the end of the line.
+0 - Move to the beginning of the line.
+H - Jump to the top of the screen.
+M - Jump to the middle of the screen.
+L - Jump to the middle of the screen.
+G - Jump to end of file.
+1G - Jump to beginning of file (same as gg).
+
+DELETING
+========
+c$ - delete start current line to the end of line
+c0 - delete start current line to the first of line
+
+OPEN MORE FILE IN BUFFER
+========================
+vim file1 file1
+then type :ls to show which file in the buffer
+then type ball to open these two file in split window
+
+:vert sb N	- vertically open buffer base on number
+:sb N		- horizontally open buffer base on number
+
+OPEN FILE IN TAB
+================
+:tabedit <filename> - open file in new tab
+:tabnew - open new tab
+
+MACRO
+=====
+[NM] q{0-9a-zA-Z"}- to start recording
+[NM] @{0-9a-zA-Z"}- to insert macro
+[NM] q - to stop recording
+[NM] @@ - Repeat the previous @{0-9a-z":*} [count] times.
+
+WINDOWS COMMAND MODE
+====================
+Ctrl W + L - Move the current window to the "far right"
+Ctrl W + H - Move the current window to the "far left"
+Ctrl W + J - Move the current window to the "very bottom"
+Ctrl W + K - Move the current window to the "very top"
+
+JUMP
+====
+% - User % key in view mode
+
+SPLIT AND EXPLORER
+==================
+:E - open explorer
+:sp . - in split in current directory
+:vs . - in vertical split in current directory
+:sp   - horizontally split current file
+:vs   - vertically split current file
+
+TEXT WIDTH OR COLUMN
+====================
+:set tw=<number> - to set text width, eg 80, it will auto enter when reach 80
+:set tw=0        - to disable text width
+gqG              - to reformat existing text to follow text width
+shift + v, gq    - using visual mode select first then press gq
+
+VIM ENVIRONMENT VARIABLE
+========================
+How to use?
+:echo $<ENV VAR> - to see the value of variable
+$MYVIMRC         - show current vimrc
+
+
+SWITCHING CASE OF CHARACTER
+===========================
+:gU  - change to uppercase
+:gu  - chnage to lowercase
+:g~  - toggle case
+:gUU - change the current line to upper case
+If not select then it will change the character under cursor
+
+OPEN NEW FILE
+=============
+:tabedit <filename> - open new file in tab
+:vsplit <filename>  - open new file vertically splitted
+:split <filename>   - open new file horizontally splitted
+

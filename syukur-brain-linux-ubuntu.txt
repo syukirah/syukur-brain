@@ -1,0 +1,20 @@
+ps -ef = show process
+kill -9 <process id> = kill process
+ctrl + z then type "bg" ENTER = to put current running process to run in the background
+rsync -avz -e 'ssh' /path/to/local/dir user@remotehost:/path/to/remote/dir = copy folder or file from one server to another server
+ctrl + s = to free current terminal display
+ctrl + q = to resume freeze terminal display
+sudo adduser <username> = Add new user to system
+sudo adduser <username> sudo = Add sudo for the specific user
+sudo userdel -r <username> = Delete <username> account
+tar -xvzf community_images.tar.gz
+
+date +%Y%m%d%H%M%S
+
+usermod -l <new user name> <old user name>
+usermod -d /home/<your directory> <new user name>
+
+htop = Cpu and Memory usage Monitor
+/var/log/syslog = system log file
+
+ wget -r -nH --cut-dirs=2 --no-parent --reject="index.html*" <url address with folder> = copy the whole folder from website

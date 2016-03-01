@@ -1,0 +1,19 @@
+================================================
+ YOUCOMPLETEME VIM PLUGIN
+================================================
+Author: Syukur Bin Md Kassim
+Email : syukur.kassim@tmrnd.com.my/syukirah@yahoo.co.uk
+
+- Installation
+ - Ubuntu
+  - Install using 'pathogen'
+   - run this command
+     > mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+     > curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+   - add 'execute pathogen#infect()' to .vimrc
+   - Run this command
+     > cd ~/.vim/bundle
+     > git clone https://github.com/Valloric/YouCompleteMe.git
+     > cd YouCompleteMe
+     > git submodule update --init --recursive
+     > ./install.sh --clang-completer / ./install.sh --clang-completer --system-clang

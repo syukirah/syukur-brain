@@ -1,0 +1,12 @@
+- How to insert character n time
+  In edit mode, Ctrl + o, set how many character to insert, press i, press
+  character to insert, the Esc
+  Eg: Ctrl + 0,80,i,<char/word>,Esc
+
+- How to insert character or words vertically
+  In visual mode, Select where to insert, press 'I', insert character, press Esc
+  Eg: Ctrl + v,select,I,<character/word>,Esc
+
+HOW TO OPEN VIMRC FILE IN VIM ITSELF
+====================================
+* In vim command:> :e $MYVIMRC

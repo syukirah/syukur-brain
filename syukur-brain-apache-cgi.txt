@@ -1,0 +1,8 @@
+Author: SYUKUR BIN MD KASSIM
+Email: syukur.kasswim@tmrn.com.my
+Description: All about apache cgi
+
+How to enable cgi module in apache2
+===================================
+* Run this command ''sudo a2enmod cgi''
+* Then restart apache2 ''sudo service apache2 restart''

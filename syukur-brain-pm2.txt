@@ -1,0 +1,12 @@
+------------------------------------------
+- PM2 STUFF
+------------------------------------------
+
+* To run pm2 on startup
+ *  pm2 startup -u <user name>
+* After run the command above need to manually change the home location
+ * vim /etc/init.d/pm2-init.sh
+ * change this line --> export PM2_HOME="/<path to user location/.pm2"
+  * eg: export PM2_HOME="/home/pi/.pm2"
+* Save current running node
+ * pm2 save - this will be use for pm2 to start node on startup

@@ -1,0 +1,41 @@
+SYUKUR BIN MD KASSIM
+syukur.kassim@tmrnd.com.my
+--------------------------
+
+PLUGIN MANAGER USING vim-plug
+=============================
+
+ How to install plugin manager
+ ------------------------------
+ - Download plug.vim and put in ~/.vim/autoload
+ - Download from https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ - ~/.vim/autoload
+ Usage
+ -----
+ - Add a vim-plug section to .vimrc
+  * Begin the section with plug#begin()
+  * List the plugin with Plug commands
+  * plug#end() to add plugins to &runtimepath
+ - Example
+  call plug#being('~/.vim/plugged')
+  Plug 'junegunn/vim-easy-align'
+  call plug#end()
+ * Reload .vimrc and :PlugInstall to install plugin
+- Detail information can be found here https://github.com/junegunn/vim-plug
+
+PLUGIN MANAGER USING vim-pathogen
+=================================
+ How to install plugin manager
+ -----------------------------
+ - Install to ~/.vim/autoload/pathogen.vim
+ - cp from https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim to ~/.vim/autoload/pathogen.vim
+ - If you're using Windows, change all occurrences of ~/.vim to ~\vimfiles
+ - create ~/.vim/bundle
+ - Add this 'execute pathogen#infect()' to .vimrc
+ - copy plugin to cd ~/.vim/bundle, done
+
+EASY-ALIGN-VIM PLUG IN
+======================
+ Cheat sheet how to use
+ ----------------------
+ - http://ricostacruz.com/cheatsheets/vim-easyalign.html
